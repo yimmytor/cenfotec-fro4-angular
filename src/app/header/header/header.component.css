@@ -1,8 +1,10 @@
 header {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 12vh;
+    width: 100vw;
     padding: 0 1.5625rem;
     background-color: #080a24;
     color: white;
@@ -16,7 +18,7 @@ header .branch-container {
 }
 
 header .branch-container .branch-logo {
-    height: 50%;
+    height: 80%;
     margin-right: 1.25rem;
 }
 
