@@ -3,6 +3,6 @@ footer {
     justify-content: center;
     align-items: center;
     height: 10vh;
-    background-color: #012674;
-    color: white;
+    background-color: var(--color-secundario);
+    color: var(--color-terciario);
 }

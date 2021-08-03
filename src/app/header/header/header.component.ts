@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  nombreEmpresa = 'Gimnasio Funcional TAVA';
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
