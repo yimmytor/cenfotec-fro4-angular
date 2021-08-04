@@ -14,7 +14,7 @@ header .branch-container {
     display: flex;
     align-items: center;    
     width: 100%;
-    height:100%;    
+    height:100%;
 }
 
 header .branch-container .branch-logo {
@@ -23,12 +23,14 @@ header .branch-container .branch-logo {
 }
 
 header .branch-container p {
+    margin: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.7rem;
+    font-size: 1.7rem;    
 }
 
 header ul {
     display: flex;
+    margin: 0;
 }
 
 header ul li {
