@@ -1,14 +1,42 @@
 <section class="seccion-central seccion-inicio">
     <div class="dark-screen">
-        <h1>{{titulo}}</h1>
+        <h1>Entrenemos Juntos</h1>
         
-        <div class="frase-dia">
-            <p>            
+        <div [class]="clasePanel">
+            <p class="frase-dia">            
                 <q>{{frase}}</q>         
                 <span>TAVA GYM</span>            
             </p>
+
+            <button class="boton-contacto" (click)="cambiarClase()">Comienza Hoy</button>
         </div>
 
-        <button class="boton-inscripcion">COMIENZA HOY</button>
-    </div>
+        <form [class]="claseFormulario" (submit)="enviarSolicitud($event)">
+            <p class="mensaje-felicidades" *ngIf="solicitud.nombre != ''">¡&Aacute;nimo {{solicitud.nombre}} estás dando el primer paso para cambiar el resto de tu vida!</p>
+
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" [(ngModel)]="solicitud.nombre" id="nombre" name="nombre" required>
+            </div>
+            <div>
+                <label for="correo">Correo:</label>
+                <input type="email" [(ngModel)]="solicitud.email" id="correo" name="correo" required>
+            </div>    
+            <div>
+                <label>Genero:</label>                
+                <input type="radio" [(ngModel)]="solicitud.genero" id="masculino" value="masculino" name="genero" checked required><label for="masculino">Masculino</label>
+                <input type="radio" [(ngModel)]="solicitud.genero" id="femenino" value="femenino" name="genero" required><label for="femenino">Femenino</label>                
+            </div>
+            <div>
+                <label for="edad">Edad:</label>
+                <input type="number" [(ngModel)]="solicitud.edad" id="edad" name="edad" min="12" max="199" value="12" required>
+            </div>
+            <div class="button-box">
+                <button type="submit"class="btn-green">Enviar</button>            
+                <button class="btn-red" (click)="cancelarEnvioFormulario($event)">Cancelar</button>
+            </div>
+
+            <p class="error" *ngIf="errorValidacion">Todos los campos son requeridos</p>
+        </form>
+    </div>    
 </section>  

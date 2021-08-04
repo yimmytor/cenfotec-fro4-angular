@@ -15,7 +15,16 @@ export class ServicioFrasesService {
       'Fijar objetivos es el primer paso para convertir lo imposible en posible.',
       'No dejes que el mundo exterior determine quien eres en esta vida.',
       'El dolor que sientes hoy es la fuerza que sentirás mañana.',
-      'El miedo es la muralla que separa lo que eres de lo que podrías ser.'
+      'El miedo es la muralla que separa lo que eres de lo que podrías ser.',
+      'Si no tienes confianza, siempre encontrarás una forma de no ganar.',
+      'Asegúrate que tu peor enemigo no vive en medio de tus dos orejas.',
+      'No se trata de si te derriban, se trata de si te levantas.',
+      'Lo que te falta de talento lo puedes contrarrestar con deseo, trabajo y dando el 110% todo el tiempo.',
+      'Si entrenas duro, no solo serás duro, serás duro de superar.',
+      '¡Nunca te rindas! El fracaso y el rechazo son sólo el primer paso para tener éxito.',
+      'No te rindas. Sufre ahora y vive el resto de tu vida como un campeón.',
+      'Aunque nadie puede volver atrás y hacer un nuevo comienzo, cualquiera puede comenzar a partir de ahora y crear un nuevo final.',
+      'Lo único que se interpone entre ti y tu sueño, es la voluntad de intentarlo y la creencia de que en realidad es posible.'
     ]
   }
 
@@ -25,8 +34,7 @@ export class ServicioFrasesService {
     let posicionAleatoria = Math.floor((Math.random() * (max - 0) + 0));
 
     if(this.frases.length > 0) {
-      frase = this.frases[posicionAleatoria];    
-      console.log(posicionAleatoria);
+      frase = this.frases[posicionAleatoria];          
     }
 
     return frase;

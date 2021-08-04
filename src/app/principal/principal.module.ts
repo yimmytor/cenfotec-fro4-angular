@@ -7,6 +7,7 @@ import { EquipoComponent } from './equipo/equipo.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ServicioFrasesService } from '../servicio-frases.service';
+import { FormsModule } from '@angular/forms'; 
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ServicioFrasesService } from '../servicio-frases.service';
     ContactoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     PrincipalComponent

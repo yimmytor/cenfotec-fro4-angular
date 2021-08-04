@@ -3,7 +3,6 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
     color: var(--color-terciario);
 }   
 
@@ -16,44 +15,48 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 0.625rem;
     min-height: 20vh;
-    width: 30vw;    
+    width: 30vw;   
+    text-align: center;
 }
 
-.seccion-inicio .frase-dia q {    
-    font-size: 1rem;
-    font-weight: 300;
+.seccion-inicio .frase-dia q {        
+    font-size: 1.2rem;
+    font-weight: 100;        
+    margin-bottom: 1rem;
 }
 
 .seccion-inicio .frase-dia span {
     display: block;    
     font-size: 0.7rem;
     font-weight: 700;
-    margin-top: 1.5 rem;
     color: var(--color-fuente-pie);
 }
 
 .seccion-inicio .frase-dia .icon {
-    height: 40px;
-    width: 40px;
+    height: 2.5rem;
+    width: 2.5rem;
     fill: var(--color-terciario);
 }
 
-.seccion-inicio .boton-inscripcion {
+.seccion-inicio .boton-contacto {
     border: none;
-    padding: 15px;
-    margin-top: 25px;
+    padding: 0.9375rem;
+    margin-top: 1.5625rem;
     cursor: pointer;
     font-size: 1.1rem;
     background-color: transparent;
     color: var(--color-borde-caja-frase);
     border: 2px solid var(--color-borde-caja-frase);
+    text-transform: uppercase;
+
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
@@ -61,8 +64,134 @@
     -o-transition: all 0.2s;
 }
 
-.seccion-inicio .boton-inscripcion:hover {
+.seccion-inicio .boton-contacto:hover {
     background-color: var(--color-borde-caja-frase);    
     color: var(--color-terciario);
-    border: 2px solid transparent;
+    border: 2px solid transparent;    
+}
+
+.panel-informacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
+
+.formulario-contacto div {
+    display: flex;
+    align-items: center;
+    width: 100%;    
+    margin-bottom: 20px;
+}
+
+.formulario-contacto label:first-child {
+    width: 20%;
+}
+
+.formulario-contacto input[type='text'],
+.formulario-contacto input[type='email'] {
+    width: 80%;
+    border: none;
+    padding: 5px;
+    border-radius: 2.5px;
+    -webkit-border-radius: 2.5px;
+    -moz-border-radius: 2.5px;
+    -ms-border-radius: 2.5px;
+    -o-border-radius: 2.5px;
+}
+
+.formulario-contacto input[type='number'] {
+    padding: 5px;
+    border: none;
+    text-align: center;
+    border-radius: 2.5px;
+    -webkit-border-radius: 2.5px;
+    -moz-border-radius: 2.5px;
+    -ms-border-radius: 2.5px;
+    -o-border-radius: 2.5px;
+}
+
+.formulario-contacto input[type='radio'] {
+    margin-right: 0.3125rem;
+}
+
+.formulario-contacto #femenino {
+    margin-left: 1.25rem;
+}
+
+.formulario-contacto .button-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.5625rem;
+}
+
+.formulario-contacto .button-box button:first-child {    
+    margin-right: 1.25rem;
+}
+
+.formulario-contacto .button-box button {
+    width: 6.25rem;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    background-color: transparent;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.formulario-contacto .button-box button.btn-green {
+    color: #00aaa2;
+    border: 2px solid #00aaa2;    
+}
+
+.formulario-contacto .button-box button.btn-green:hover {
+    background-color: #00aaa2;
+    color: var(--color-terciario);
+    border: 2px solid transparent;    
+}
+
+.formulario-contacto .button-box button.btn-red {
+    color: #d83636;
+    border: 2px solid #d83636;    
+}
+
+.formulario-contacto .button-box button.btn-red:hover {
+    background-color: #d83636;
+    color: var(--color-terciario);
+    border: 2px solid transparent;    
+}
+
+.oculto {
+    display: none;
+}
+
+.formulario-contacto .mensaje-felicidades {
+    width: 100%;
+    text-align: center;
+    color: var(--color-fuente-pie);
+}
+
+.formulario-contacto .error {
+    width: 100%;
+    padding: 0.625rem;
+    background: #ff9d9d;
+    color: #911818;
 }

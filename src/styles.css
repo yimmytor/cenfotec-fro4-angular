@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:wght@500&display=swap');
-@import '~normalize.css';
 
 :root {
     /* Colores */
@@ -55,9 +54,7 @@ body {
     flex-direction: column; 
     align-items: center;
     width: 100%;    
-    height: 100vh;        
-    border-bottom: 1px solid gray;
-    text-align: center;;
+    height: 100vh;            
 }
 
 .seccion-central .dark-screen {
@@ -66,12 +63,13 @@ body {
     align-items: center;    
     width: 100%;    
     height: 100%;
-    background-color: #00000086;
+    background-color: #000000ab;
 }
 
 .seccion-central h1 {    
     margin: 18vh 0 15vh 0; 
     font-size: 2.5rem;
     font-weight: 500;
-    color: var(--color-fuente-titulo);
+    text-transform: uppercase;
+    color: var(--color-fuente-titulo);    
 }
