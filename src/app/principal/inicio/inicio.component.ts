@@ -16,16 +16,16 @@ export class InicioComponent implements OnInit {
   errorValidacion: boolean;
 
   enviarSolicitud(event: Event) {
-    console.log(this.solicitud.nombre === '' || this.solicitud.email === '' || this.solicitud.edad < 12);
-    
-    if(this.solicitud.nombre === '' || this.solicitud.email === '' || this.solicitud.edad < 12) {
-      event.preventDefault();
+    event.preventDefault();
 
+    if(this.solicitud.nombre === '' || this.solicitud.email === '' || this.solicitud.edad < 12) {
       this.errorValidacion = true;   
 
       setTimeout(() => {
         this.errorValidacion = false;
       }, 3000);
+    }else{
+      this.cambiarClase();
     }
   }
 
