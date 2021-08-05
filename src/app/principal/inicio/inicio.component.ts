@@ -14,6 +14,8 @@ export class InicioComponent implements OnInit {
   claseFormulario: string;
   solicitud: SolicitudContacto;
   errorValidacion: boolean;
+  botonesDeshabilitados: boolean;
+  validacionExitosa: boolean;
 
   enviarSolicitud(event: Event) {
     event.preventDefault();
@@ -25,7 +27,16 @@ export class InicioComponent implements OnInit {
         this.errorValidacion = false;
       }, 3000);
     }else{
-      this.cambiarClase();
+      this.botonesDeshabilitados = true
+      this.validacionExitosa = true;
+
+      setTimeout(() => {
+        this.botonesDeshabilitados = false
+        this.validacionExitosa = false;
+
+        this.cambiarClase();
+      }, 3000);
+      
     }
   }
 
@@ -62,6 +73,8 @@ export class InicioComponent implements OnInit {
     this.clasePanel = 'panel-informacion';
     this.claseFormulario = 'formulario-contacto';    
     this.errorValidacion = false;
+    this.botonesDeshabilitados = false; 
+    this.validacionExitosa = false;
     this.solicitud = {
       nombre: '',
       email: '',

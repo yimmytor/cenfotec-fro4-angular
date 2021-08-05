@@ -32,11 +32,12 @@
                 <input type="number" [(ngModel)]="solicitud.edad" id="edad" name="edad" min="12" max="199" value="12" required>
             </div>
             <div class="button-box">
-                <button type="submit"class="btn-green">Enviar</button>            
-                <button class="btn-red" (click)="cancelarEnvioFormulario($event)">Cancelar</button>
+                <button type="submit"class="btn-green" [disabled]="botonesDeshabilitados">Enviar</button>            
+                <button class="btn-red" (click)="cancelarEnvioFormulario($event)" [disabled]="botonesDeshabilitados">Cancelar</button>
             </div>
 
             <p class="error" *ngIf="errorValidacion">Todos los campos son requeridos</p>
+            <p class="success" *ngIf="validacionExitosa">¡Hemos registrado su petición, pronto le contactaremos!</p>
         </form>
     </div>    
 </section>  

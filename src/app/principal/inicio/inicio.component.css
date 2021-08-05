@@ -80,7 +80,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
+    width: 40%;
 }
 
 .formulario-contacto div {
@@ -193,5 +193,14 @@
     width: 100%;
     padding: 0.625rem;
     background: #ff9d9d;
+    text-align: center;
     color: #911818;
+}
+
+.formulario-contacto .success {
+    width: 100%;
+    padding: 0.625rem;
+    background: #9dffe7;
+    text-align: center;
+    color: #18917d;
 }

@@ -53,8 +53,9 @@ body {
     display: flex;
     flex-direction: column; 
     align-items: center;
-    width: 100%;    
-    height: 100vh;            
+    min-width: 100%;    
+    height: 100vh;   
+    overflow: auto;         
 }
 
 .seccion-central .dark-screen {
@@ -64,12 +65,14 @@ body {
     width: 100%;    
     height: 100%;
     background-color: #000000ab;
+    font-weight: 600;
 }
 
 .seccion-central h1 {    
-    margin: 18vh 0 15vh 0; 
+    margin: 18vh 0 5vh 0; 
     font-size: 2.5rem;
     font-weight: 500;
     text-transform: uppercase;
     color: var(--color-fuente-titulo);    
+    font-weight: 600;
 }
