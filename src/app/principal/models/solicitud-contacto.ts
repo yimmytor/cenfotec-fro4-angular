@@ -4,3 +4,4 @@ export interface SolicitudContacto {
     genero: string,
     edad: number
 }
+

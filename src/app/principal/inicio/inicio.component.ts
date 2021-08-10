@@ -1,4 +1,3 @@
-import { CompileShallowModuleMetadata } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ServicioFrasesService } from 'src/app/servicio-frases.service';
 import { SolicitudContacto } from '../models/solicitud-contacto';

@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  fdcApiUrl: 'https://api.nal.usda.gov/fdc/v1/foods/search',
+  fdcApiKey: 'xnfmrpwOIKCP5RSv3dINlK5Xjcdi5ZaOt5OOxyO9'
 };
 
 /*

@@ -5,9 +5,11 @@ import { InicioComponent } from './inicio/inicio.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { EquipoComponent } from './equipo/equipo.component';
 import { ServiciosComponent } from './servicios/servicios.component';
+import { RecursosComponent } from './recursos/recursos.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { ServicioFrasesService } from '../servicio-frases.service';
-import { FormsModule } from '@angular/forms'; 
+import { ServicioFdcService } from '../servicio-fdc.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     NosotrosComponent,
     EquipoComponent,
     ServiciosComponent,
-    ContactoComponent
+    ContactoComponent,
+    RecursosComponent,
   ],
   imports: [
     CommonModule,
@@ -26,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     PrincipalComponent
   ],
   providers: [
-    ServicioFrasesService
+    ServicioFrasesService,
+    ServicioFdcService
   ]
 })
 export class PrincipalModule { }
