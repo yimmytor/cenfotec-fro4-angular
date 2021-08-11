@@ -5,12 +5,10 @@
     --color-primario: #022a46;
     --color-primario-1: #022136;
     --color-secundario: #0077a7;
+    --color-secundario-1: #3dc8ff;
     --color-terciario: #ffffff; 
     --color-fondo-body: #000000;
 
-    /* Inicio */
-    --color-borde-caja-frase: rgb(78, 190, 255);
-    
     /* Fuentes */
     --color-fuente-titulo: #3dc8ff;
     --color-fuente-subtitulo: #ff265c;
@@ -22,6 +20,10 @@
 
     /* Botones */
     --color-boton-primario: #3dc8ff;
+
+    /* Bordes */
+    --color-borde-gris: #c9c9c9;
+    --color-borde-caja-frase: rgb(78, 190, 255);
 }
 
 * {
@@ -55,6 +57,7 @@ body {
     flex-direction: column; 
     align-items: center;
     min-width: 100%;    
+    max-height: 100vh;
     height: 100vh;   
     overflow: auto;         
 }

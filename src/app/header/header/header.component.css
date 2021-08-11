@@ -8,6 +8,7 @@ header {
     padding: 0 1.5625rem;
     background-color: var(--color-primario);
     color: var(--color-terciario);
+    z-index: 9999;
 }
 
 header .branch-container {

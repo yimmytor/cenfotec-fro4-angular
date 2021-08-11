@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicioFrasesService } from 'src/app/servicio-frases.service';
-import { SolicitudContacto } from '../models/solicitud-contacto';
+import { SolicitudContacto } from '../../models/solicitud-contacto';
 
 @Component({
   selector: 'app-inicio',

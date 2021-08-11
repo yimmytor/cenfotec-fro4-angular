@@ -1,5 +1,5 @@
 export interface IFdcNutrient {
     nutrientName: string,
-    nutrientNumber: string,
+    value: number,
     unitName: string
 }
