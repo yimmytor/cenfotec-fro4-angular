@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./principal.component.css']
 })
 export class PrincipalComponent implements OnInit {
-
+  nombreEmpresa = 'Gimnasio Funcional TAVA';
+  
   constructor() { }
 
   ngOnInit(): void {

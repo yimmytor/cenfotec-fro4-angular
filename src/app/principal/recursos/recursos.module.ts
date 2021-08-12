@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RecursosComponent } from './recursos/recursos.component';
+import { RecursosRoutingModule } from './recursos-routing.module';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -9,6 +10,7 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
+    RecursosRoutingModule,
     FormsModule
   ],
   exports: [

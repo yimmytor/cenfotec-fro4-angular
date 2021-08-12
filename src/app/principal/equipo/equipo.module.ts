@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EquipoComponent } from './equipo/equipo.component';
+import { EquipoRoutingModule } from './equipo-routing.module';
 
 
 @NgModule({
@@ -8,7 +9,8 @@ import { EquipoComponent } from './equipo/equipo.component';
     EquipoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    EquipoRoutingModule
   ],
   exports: [
     EquipoComponent
