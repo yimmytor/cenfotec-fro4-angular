@@ -11,6 +11,8 @@ import { RecursosModule } from './recursos/recursos.module';
 import { ContactoModule } from './contacto/contacto.module';
 import { ServicioFrasesService } from '../servicio-frases.service';
 import { ServicioFdcService } from '../servicio-fdc.service';
+import { ServicioProductosService } from '../servicio-productos.service';
+import { ServicioCarritoService } from '../servicio-carrito.service';
 
 @NgModule({
   declarations: [    
@@ -32,7 +34,9 @@ import { ServicioFdcService } from '../servicio-fdc.service';
   ],
   providers: [
     ServicioFrasesService,
-    ServicioFdcService
+    ServicioFdcService,
+    ServicioProductosService,
+    ServicioCarritoService
   ]
 })
 export class PrincipalModule { }
