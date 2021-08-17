@@ -33,9 +33,9 @@ export class ServicioCarritoService {
   }
 
   eliminarItem(id: number) {
-    let elemento = this.items.map((item,index) => item.id === id ? index : -1)[0];
-    
-    if(elemento) {
+    let elemento = this.items.map((item,index) => item.id === id ? index : -1).filter(item => item !== -1)[0];
+        
+    if(elemento > -1) {
       this.items.splice(elemento,1);
       this.itemsSubject.next(this.items);
     }

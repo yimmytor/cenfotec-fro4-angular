@@ -12,6 +12,7 @@ export class CarritoComponent implements OnInit {
   public carrito = Array<IProductoCarrito>();
   public subscription: Subscription | undefined;
   public claseCarrito = "carrito-panel panel-oculto";
+  public carritoAbierto = false;
 
   constructor(private servicioCarrito: ServicioCarritoService) { }
 
@@ -30,12 +31,21 @@ export class CarritoComponent implements OnInit {
     }    
   }
 
-  mostrarOcultarCarrito() {
-    
+  obtenerTotalCarrito() {
+    return this.carrito.length > 0 ? this.carrito.reduce((acumulador, producto) => acumulador + producto.precio, 0) : 0;
+  }
+
+  eliminarProductoCarrito(id: number) {
+    this.servicioCarrito.eliminarItem(id);
+  }
+
+  mostrarOcultarCarrito() {    
     if(this.claseCarrito === "carrito-panel panel-oculto") {
       this.claseCarrito = "carrito-panel";
+      this.carritoAbierto = true;
     } else {
       this.claseCarrito = "carrito-panel panel-oculto"
+      this.carritoAbierto = false;
     }
   }
 
