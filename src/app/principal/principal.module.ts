@@ -13,10 +13,11 @@ import { ServicioFrasesService } from '../servicio-frases.service';
 import { ServicioFdcService } from '../servicio-fdc.service';
 import { ServicioProductosService } from '../servicio-productos.service';
 import { ServicioCarritoService } from '../servicio-carrito.service';
+import { CarritoComponent } from './carrito/carrito.component';
 
 @NgModule({
   declarations: [    
-    PrincipalComponent
+    PrincipalComponent, CarritoComponent
   ],
   imports: [
     CommonModule,

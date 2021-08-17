@@ -3,5 +3,5 @@ export interface IProductoCarrito {
     productNumber: number,
     nombre: string,
     precio: number,
-    urlImagen: string 
+    urlImagen: string
 }

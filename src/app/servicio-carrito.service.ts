@@ -18,16 +18,18 @@ export class ServicioCarritoService {
     this.itemsSubject.next(this.items);
   }
 
-  agregarItem(item: IProducto) {
-    this.items.push({
-      id: this.indice++,
-      productNumber: item.productNumber,
-      nombre: item.nombre,
-      precio: item.precio,
-      urlImagen: item.urlImagen
-    });
+  agregarItem(item: IProducto | undefined) {
+    if(item) {
+      this.items.push({
+        id: this.indice++,
+        productNumber: item.productNumber,
+        nombre: item.nombre,
+        precio: item.precio,
+        urlImagen: item.urlImagen
+      });
 
-    this.itemsSubject.next(this.items);
+      this.itemsSubject.next(this.items);
+    }
   }
 
   eliminarItem(id: number) {

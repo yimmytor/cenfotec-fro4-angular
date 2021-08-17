@@ -10,10 +10,11 @@
 .producto {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    width: 20vw;
-    height: 55vh;
+    padding: 10px;
+    width: 22vw;
+    height: 60vh;
     margin-bottom: 5vh;
     background-color: var(--color-terciario);
     border-radius: 5px;
@@ -23,10 +24,24 @@
     -o-border-radius: 5px;
 }
 
+.producto .cuerpo-producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.producto .bottom-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .producto h2 {
     width: 100%;
     text-align: center;
-    font-size: 150%;
+    font-size: 120%;
     margin-top: 5%;
     color: var(--color-primario);
 }

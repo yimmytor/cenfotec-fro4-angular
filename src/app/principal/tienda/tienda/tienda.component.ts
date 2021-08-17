@@ -15,6 +15,12 @@ export class TiendaComponent implements OnInit {
   public carrito = Array<IProductoCarrito>();
   public subscription: Subscription | undefined;
 
+  agregarAlCarrito(productNumber: number){
+    this.servicioCarrito.agregarItem(
+      this.servicioProductos.obtenerProducto(productNumber)
+    );
+  }
+
   constructor(private servicioProductos: ServicioProductosService, private servicioCarrito: ServicioCarritoService) {
     this.productos = this.servicioProductos.obtenerProductos();
   }
@@ -23,8 +29,8 @@ export class TiendaComponent implements OnInit {
     this.subscription = this.servicioCarrito.itemsObservable$
     .subscribe((items: Array<IProductoCarrito>) => {
       this.carrito = items;
-    });    
-    
+    });        
+
     this.servicioCarrito.actualizar();
   }
 
@@ -32,5 +38,9 @@ export class TiendaComponent implements OnInit {
     if(this.subscription) {
       this.subscription.unsubscribe();
     }    
+  }
+
+  consultarCantidad(productNumber: number) {
+    return this.carrito.filter(productoCarrito => productoCarrito.productNumber === productNumber).length    
   }
 }
