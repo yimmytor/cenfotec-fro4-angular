@@ -2,6 +2,6 @@
 
 Este es un sitio web para poner en práctica los conocimientos del módulo 4 ***Desarrollo de Aplicaciones Web con Angular*** del ***Programa de Actualización Profesional de Front-End Web Development*** de la ***Universidad Cenfotec***.
 
-## Live Demo
+## Demo
 
 [Gimnasio Funcional TAVA](https://frosty-bhabha-8d6c56.netlify.app/)
